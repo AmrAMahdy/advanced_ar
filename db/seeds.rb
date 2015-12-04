@@ -19,6 +19,12 @@ Person.create! [
   { first_name: "LeBron", last_name: "James", age: 30, login: "bron", pass: "need more rings" }
 ]
 
+PersonalInfo.destroy_all
+
+PersonalInfo.create [
+  { height: 169, weight: 65, person_id: Person.first.id }
+]
+
 Job.destroy_all
 
 Person.first.jobs.create! [
