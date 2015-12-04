@@ -44,3 +44,13 @@ Hobby.create! [
 ]
 
 Person.first.hobbies << Hobby.first
+
+SalaryRange.destroy_all
+
+SalaryRange.create [
+  { min_salary: 10000.00, max_salary: 20000.00 },
+  { min_salary: 8000.00, max_salary: 15000.00 }
+]
+
+Person.first.jobs.first.salary_range = SalaryRange.first;
+Person.first.jobs.last.salary_range = SalaryRange.last;
