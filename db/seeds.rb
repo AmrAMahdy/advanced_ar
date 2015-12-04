@@ -40,7 +40,9 @@ Person.last.jobs.create! [
 Hobby.destroy_all
 
 Hobby.create! [
-  { name: "programming" }
+  { name: "Programming" },
+  { name: "Music" },
+  { name: "Reading" }
 ]
 
 Person.first.hobbies << Hobby.first
